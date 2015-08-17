@@ -26,6 +26,6 @@ class PlaceholdItProvider implements ProviderInterface
      */
     public function getName()
     {
-        return 'placehold_it';
+        return 'placehold.it';
     }
 }

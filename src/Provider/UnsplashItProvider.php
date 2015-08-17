@@ -26,6 +26,6 @@ class UnsplashItProvider implements ProviderInterface
      */
     public function getName()
     {
-        return 'unsplash_it';
+        return 'unsplash.it';
     }
 }
