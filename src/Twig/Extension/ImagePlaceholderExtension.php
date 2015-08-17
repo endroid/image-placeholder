@@ -9,6 +9,7 @@
 
 namespace Endroid\Bundle\ImagePlaceholderBundle\Twig\Extension;
 
+use Endroid\Bundle\ImagePlaceholderBundle\Service\ImagePlaceholderService;
 use Twig_Extension;
 
 class ImagePlaceholderExtension extends Twig_Extension

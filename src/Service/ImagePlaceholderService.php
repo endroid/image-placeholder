@@ -7,7 +7,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Endroid\Bundle\ImagePlaceholderBundle\Twig\Extension;
+namespace Endroid\Bundle\ImagePlaceholderBundle\Service;
 
 use Endroid\Bundle\ImagePlaceholderBundle\Provider\ProviderInterface;
 use Symfony\Component\Security\Core\Exception\ProviderNotFoundException;
@@ -36,10 +36,8 @@ class ImagePlaceholderService
 
     /**
      * Creates a new instance.
-     *
-     * @param string $providerName
      */
-    public function __construct($providerName)
+    public function __construct()
     {
         $this->enabled = true;
         $this->checkImageExists = false;
