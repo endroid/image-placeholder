@@ -25,6 +25,11 @@ class ImagePlaceholderService
     protected $checkImageExists;
 
     /**
+     * @var boolean
+     */
+    protected $enabled;
+
+    /**
      * @var ProviderInterface[]
      */
     protected $providers;
@@ -33,13 +38,42 @@ class ImagePlaceholderService
      * Creates a new instance.
      *
      * @param string $providerName
-     * @param bool   $checkImageExists
      */
-    public function __construct($providerName, $checkImageExists)
+    public function __construct($providerName)
+    {
+        $this->enabled = true;
+        $this->checkImageExists = false;
+        $this->providers = array();
+    }
+
+    /**
+     * Sets the provider name.
+     *
+     * @param string $providerName
+     */
+    public function setProviderName($providerName)
     {
         $this->providerName = $providerName;
+    }
+
+    /**
+     * Sets the service to active / inactive.
+     *
+     * @param boolean $enabled
+     */
+    public function setEnabled($enabled)
+    {
+        $this->enabled = $enabled;
+    }
+
+    /**
+     * Determines if the image resource should be checked.
+     *
+     * @param $checkImageExists
+     */
+    public function setCheckImageExists($checkImageExists)
+    {
         $this->checkImageExists = $checkImageExists;
-        $this->providers = array();
     }
 
     /**
@@ -50,6 +84,10 @@ class ImagePlaceholderService
     public function addProvider(ProviderInterface $provider)
     {
         $this->providers[$provider->getName()] = $provider;
+
+        if (!$this->providerName && count($this->providers) == 1) {
+            $this->providerName = $provider->getName();
+        }
     }
 
     /**
@@ -61,6 +99,10 @@ class ImagePlaceholderService
      */
     public function isValidImageUrl($url)
     {
+        if (!$this->enabled) {
+            return $url;
+        }
+
         if (!$url) {
             return false;
         }

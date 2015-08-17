@@ -21,13 +21,12 @@ class EndroidImagePlaceholderExtension extends Extension
         $configuration = new Configuration();
         $config = $this->processConfiguration($configuration, $configs);
 
-        $container->setParameter('endroid.twitter.consumer_key', $config['consumer_key']);
-        $container->setParameter('endroid.twitter.consumer_secret', $config['consumer_secret']);
-        $container->setParameter('endroid.twitter.access_token', $config['access_token']);
-        $container->setParameter('endroid.twitter.access_token_secret', $config['access_token_secret']);
-        $container->setParameter('endroid.twitter.api_url', $config['api_url']);
-
         $loader = new YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.yml');
+
+        $imagePlaceholderService = $container->getDefinition('endroid.image_placeholder.service');
+        $imagePlaceholderService->addMethodCall('setProviderName', array($config['provider']));
+        $imagePlaceholderService->addMethodCall('setEnabled', array($config['enabled']));
+        $imagePlaceholderService->addMethodCall('setCheckImageExists', array($config['check_image_exists']));
     }
 }
