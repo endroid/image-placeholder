@@ -47,8 +47,6 @@ public function registerBundles()
 The default placeholder generation parameters can be overridden via the
 configuration. All parameters are optional.
 
-### config.yml
-
 ```yaml
 endroid_image_placeholder:
     enabled: %kernel.debug%
@@ -63,7 +61,7 @@ case the bundle is activated and the given URL is empty or invalid.
 
 ``` twig
 <img src="{{ image_url|image_placeholder(200, 300) }}" />
-<img src="{{ image_url|image_placeholder(200, 300, { provider: 'unsplash_it' }) }}" />
+<img src="{{ image_url|image_placeholder(200, 300, { provider: 'unsplash.it' }) }}" />
 ```
 
 ## Versioning
