@@ -52,7 +52,7 @@ configuration. All parameters are optional.
 ```yaml
 endroid_image_placeholder:
     enabled: %kernel.debug%
-    provider: placehold_it
+    provider: placehold.it
     check_image_exists: true
 ```
 
