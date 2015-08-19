@@ -8,12 +8,17 @@ services:
         tags:
             - { name: twig.extension }
 
-    endroid.image_placeholder.provider.placehold_it:
+    endroid.image_placeholder.provider.placehold:
         class: Endroid\Bundle\ImagePlaceholderBundle\Provider\PlaceholdItProvider
         tags:
             - { name: endroid.image_placeholder.provider }
 
-    endroid.image_placeholder.provider.unsplash_it:
+    endroid.image_placeholder.provider.placekitten:
+        class: Endroid\Bundle\ImagePlaceholderBundle\Provider\PlaceKittenProvider
+        tags:
+            - { name: endroid.image_placeholder.provider }
+
+    endroid.image_placeholder.provider.unsplash:
         class: Endroid\Bundle\ImagePlaceholderBundle\Provider\UnsplashItProvider
         tags:
             - { name: endroid.image_placeholder.provider }
