@@ -28,6 +28,11 @@ services:
         tags:
             - { name: endroid.image_placeholder.provider }
 
+    endroid.image_placeholder.provider.pipsum:
+        class: Endroid\Bundle\ImagePlaceholderBundle\Provider\PipsumProvider
+        tags:
+            - { name: endroid.image_placeholder.provider }
+
     endroid.image_placeholder.provider.placebear:
         class: Endroid\Bundle\ImagePlaceholderBundle\Provider\PlaceBearProvider
         tags:
