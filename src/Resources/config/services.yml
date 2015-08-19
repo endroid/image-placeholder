@@ -8,6 +8,41 @@ services:
         tags:
             - { name: twig.extension }
 
+    endroid.image_placeholder.provider.baconmockup:
+        class: Endroid\Bundle\ImagePlaceholderBundle\Provider\BaconMockupProvider
+        tags:
+            - { name: endroid.image_placeholder.provider }
+
+    endroid.image_placeholder.provider.beerhold:
+        class: Endroid\Bundle\ImagePlaceholderBundle\Provider\BeerHoldProvider
+        tags:
+            - { name: endroid.image_placeholder.provider }
+
+    endroid.image_placeholder.provider.loremflickr:
+        class: Endroid\Bundle\ImagePlaceholderBundle\Provider\LoremFlickrProvider
+        tags:
+            - { name: endroid.image_placeholder.provider }
+
+    endroid.image_placeholder.provider.lorempixel:
+        class: Endroid\Bundle\ImagePlaceholderBundle\Provider\LoremPixelProvider
+        tags:
+            - { name: endroid.image_placeholder.provider }
+
+    endroid.image_placeholder.provider.placebear:
+        class: Endroid\Bundle\ImagePlaceholderBundle\Provider\PlaceBearProvider
+        tags:
+            - { name: endroid.image_placeholder.provider }
+
+    endroid.image_placeholder.provider.placecreature:
+        class: Endroid\Bundle\ImagePlaceholderBundle\Provider\PlaceCreatureProvider
+        tags:
+            - { name: endroid.image_placeholder.provider }
+
+    endroid.image_placeholder.provider.placehoff:
+        class: Endroid\Bundle\ImagePlaceholderBundle\Provider\PlaceHoffProvider
+        tags:
+            - { name: endroid.image_placeholder.provider }
+
     endroid.image_placeholder.provider.placehold:
         class: Endroid\Bundle\ImagePlaceholderBundle\Provider\PlaceholdItProvider
         tags:
@@ -15,6 +50,11 @@ services:
 
     endroid.image_placeholder.provider.placekitten:
         class: Endroid\Bundle\ImagePlaceholderBundle\Provider\PlaceKittenProvider
+        tags:
+            - { name: endroid.image_placeholder.provider }
+
+    endroid.image_placeholder.provider.placeskull:
+        class: Endroid\Bundle\ImagePlaceholderBundle\Provider\PlaceSkullProvider
         tags:
             - { name: endroid.image_placeholder.provider }
 

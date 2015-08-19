@@ -50,7 +50,7 @@ configuration. All parameters are optional.
 ```yaml
 endroid_image_placeholder:
     enabled: %kernel.debug%
-    provider: placehold
+    provider: lorempixel
     check_image_exists: true
 ```
 
@@ -61,15 +61,23 @@ case the bundle is activated and the given URL is empty or invalid.
 
 ``` twig
 <img src="{{ image_url|image_placeholder(200, 300) }}" />
-<img src="{{ image_url|image_placeholder(200, 300, { provider: 'unsplash' }) }}" />
+<img src="{{ image_url|image_placeholder(200, 300, { provider: 'placehoff' }) }}" />
 ```
 
 ## Providers
 
 Currently the following providers are supported.
 
+* [baconmockup.com](https://baconmockup.com/)
+* [beerhold.it](http://beerhold.it/)
+* [loremflickr.com](http://loremflickr.com/)
+* [lorempixel.com](http://lorempixel.com/)
+* [placebear.com](http://placebear.com/)
+* [placecreature.com](http://placecreature.com/)
+* [place-hoff.com](http://place-hoff.com/)
 * [placehold.it](http://placehold.it/)
 * [placekitten.com](http://placekitten.com/)
+* [placeskull.com](http://placeskull.com/)
 * [unsplash.it](http://unsplash.it/)
 
 ## Versioning
