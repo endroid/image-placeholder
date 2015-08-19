@@ -1,7 +1,7 @@
 {
     "name": "endroid/image-placeholder-bundle",
     "description": "Endroid Image Placeholder Bundle for Symfony",
-    "keywords": ["endroid", "image", "placeholder", "unsplash.it", "placehold.it", "symfony", "bundle"],
+    "keywords": ["endroid", "image", "placeholder", "unsplash", "placehold", "placekitten", "symfony", "bundle"],
     "homepage": "https://github.com/endroid/EndroidImagePlaceholderBundle",
     "type": "library",
     "license": "MIT",

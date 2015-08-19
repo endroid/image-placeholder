@@ -25,7 +25,7 @@ class Configuration implements ConfigurationInterface
             ->root('endroid_image_placeholder')
                 ->children()
                     ->booleanNode('enabled')->isRequired()->end()
-                    ->scalarNode('provider')->defaultValue('placehold.it')->end()
+                    ->scalarNode('provider')->defaultValue('placehold')->end()
                     ->booleanNode('check_image_exists')->defaultValue(true)->end()
                 ->end()
         ;

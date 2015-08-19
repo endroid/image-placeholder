@@ -50,7 +50,7 @@ configuration. All parameters are optional.
 ```yaml
 endroid_image_placeholder:
     enabled: %kernel.debug%
-    provider: placehold.it
+    provider: placehold
     check_image_exists: true
 ```
 
@@ -61,8 +61,16 @@ case the bundle is activated and the given URL is empty or invalid.
 
 ``` twig
 <img src="{{ image_url|image_placeholder(200, 300) }}" />
-<img src="{{ image_url|image_placeholder(200, 300, { provider: 'unsplash.it' }) }}" />
+<img src="{{ image_url|image_placeholder(200, 300, { provider: 'unsplash' }) }}" />
 ```
+
+## Providers
+
+Currently the following providers are supported.
+
+* [placehold.it](http://placehold.it/)
+* [placekitten.com](http://placekitten.com/)
+* [unsplash.it](http://unsplash.it/)
 
 ## Versioning
 

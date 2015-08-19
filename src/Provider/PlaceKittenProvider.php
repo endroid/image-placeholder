@@ -9,14 +9,14 @@
 
 namespace Endroid\Bundle\ImagePlaceholderBundle\Provider;
 
-class UnsplashItProvider implements ProviderInterface
+class PlaceKittenProvider implements ProviderInterface
 {
     /**
      * {@inheritdoc}
      */
     public function getUrl($width, $height, array $options = array())
     {
-        $url = 'https://unsplash.it/'.$width.'/'.$height;
+        $url = 'http://www.placekitten.com/'.$width.'/'.$height;
 
         return $url;
     }
@@ -26,6 +26,6 @@ class UnsplashItProvider implements ProviderInterface
      */
     public function getName()
     {
-        return 'unsplash';
+        return 'placekitten';
     }
 }
