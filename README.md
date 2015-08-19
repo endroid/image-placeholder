@@ -72,6 +72,7 @@ Currently the following providers are supported.
 * [beerhold.it](http://beerhold.it/)
 * [loremflickr.com](http://loremflickr.com/)
 * [lorempixel.com](http://lorempixel.com/)
+* [pipsum.com](http://pipsum.com/)
 * [placebear.com](http://placebear.com/)
 * [placecreature.com](http://placecreature.com/)
 * [place-hoff.com](http://place-hoff.com/)
