@@ -25,7 +25,7 @@ class ImagePlaceholderService
     protected $checkImageExists;
 
     /**
-     * @var boolean
+     * @var bool
      */
     protected $enabled;
 
@@ -57,7 +57,7 @@ class ImagePlaceholderService
     /**
      * Sets the service to active / inactive.
      *
-     * @param boolean $enabled
+     * @param bool $enabled
      */
     public function setEnabled($enabled)
     {
@@ -123,7 +123,7 @@ class ImagePlaceholderService
     {
         $contents = @file_get_contents($url);
 
-        return ($contents);
+        return $contents;
     }
 
     /**
