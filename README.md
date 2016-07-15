@@ -5,8 +5,8 @@ Image Placeholder Bundle
 
 [![Latest Stable Version](http://img.shields.io/packagist/v/endroid/image-placeholder-bundle.svg)](https://packagist.org/packages/endroid/image-placeholder-bundle)
 [![Build Status](http://img.shields.io/travis/endroid/EndroidImagePlaceholderBundle.svg)](http://travis-ci.org/endroid/EndroidImagePlaceholderBundle)
-[![Latest Stable Version](https://poser.pugx.org/endroid/image-placeholder-bundle/v/stable.png)](https://packagist.org/packages/endroid/image-placeholder-bundle)
 [![Total Downloads](http://img.shields.io/packagist/dt/endroid/image-placeholder-bundle.svg)](https://packagist.org/packages/endroid/image-placeholder-bundle)
+[![Monthly Downloads](http://img.shields.io/packagist/dm/endroid/image-placeholder-bundle.svg)](https://packagist.org/packages/endroid/image-placeholder-bundle)
 [![License](http://img.shields.io/packagist/l/endroid/image-placeholder-bundle.svg)](https://packagist.org/packages/endroid/image-placeholder-bundle)
 
 Provides a Twig filter that replaces empty or invalid URLs with a placeholder
@@ -83,9 +83,9 @@ Currently the following providers are supported.
 
 ## Versioning
 
-Version numbers follow the MAJOR.MINOR.PATCH scheme. Backwards compatible
-changes will be kept to a minimum but be aware that these can occur. Lock
-your dependencies for production and test your code when upgrading.
+Version numbers follow the MAJOR.MINOR.PATCH scheme. Backwards compatibility
+breaking changes will be kept to a minimum but be aware that these can occur.
+Lock your dependencies for production and test your code when upgrading.
 
 ## License
 
