@@ -14,7 +14,7 @@ class PlaceholdItProvider implements ProviderInterface
     /**
      * {@inheritdoc}
      */
-    public function getUrl($width, $height, array $options = array())
+    public function getUrl($width, $height, array $options = [])
     {
         $url = 'http://placehold.it/'.$width.'x'.$height;
 

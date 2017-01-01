@@ -41,7 +41,7 @@ class ImagePlaceholderService
     {
         $this->enabled = true;
         $this->checkImageExists = false;
-        $this->providers = array();
+        $this->providers = [];
     }
 
     /**
@@ -137,7 +137,7 @@ class ImagePlaceholderService
      *
      * @throws ProviderNotFoundException
      */
-    public function getUrl($width, $height, array $options = array())
+    public function getUrl($width, $height, array $options = [])
     {
         $providerName = $this->providerName;
         if (isset($options['provider'])) {

@@ -14,7 +14,7 @@ class UnsplashItProvider implements ProviderInterface
     /**
      * {@inheritdoc}
      */
-    public function getUrl($width, $height, array $options = array())
+    public function getUrl($width, $height, array $options = [])
     {
         $url = 'https://unsplash.it/'.$width.'/'.$height;
 

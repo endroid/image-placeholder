@@ -14,7 +14,7 @@ class LoremPixelProvider implements ProviderInterface
     /**
      * {@inheritdoc}
      */
-    public function getUrl($width, $height, array $options = array())
+    public function getUrl($width, $height, array $options = [])
     {
         $url = 'http://lorempixel.com/'.$width.'/'.$height.'/';
 

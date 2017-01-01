@@ -30,7 +30,7 @@ class ProviderPass implements CompilerPassInterface
         );
 
         foreach ($taggedServices as $id => $tags) {
-            $definition->addMethodCall('addProvider', array(new Reference($id)));
+            $definition->addMethodCall('addProvider', [new Reference($id)]);
         }
     }
 }

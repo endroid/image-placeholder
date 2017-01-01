@@ -14,7 +14,7 @@ class PlaceBearProvider implements ProviderInterface
     /**
      * {@inheritdoc}
      */
-    public function getUrl($width, $height, array $options = array())
+    public function getUrl($width, $height, array $options = [])
     {
         $url = 'http://placebear.com/'.$width.'/'.$height;
 

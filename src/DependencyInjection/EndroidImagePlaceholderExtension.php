@@ -25,8 +25,8 @@ class EndroidImagePlaceholderExtension extends Extension
         $loader->load('services.yml');
 
         $imagePlaceholderService = $container->getDefinition('endroid.image_placeholder.service');
-        $imagePlaceholderService->addMethodCall('setProviderName', array($config['provider']));
-        $imagePlaceholderService->addMethodCall('setEnabled', array($config['enabled']));
-        $imagePlaceholderService->addMethodCall('setCheckImageExists', array($config['check_image_exists']));
+        $imagePlaceholderService->addMethodCall('setProviderName', [$config['provider']]);
+        $imagePlaceholderService->addMethodCall('setEnabled', [$config['enabled']]);
+        $imagePlaceholderService->addMethodCall('setCheckImageExists', [$config['check_image_exists']]);
     }
 }

@@ -11,6 +11,7 @@ namespace Endroid\Bundle\ImagePlaceholderBundle\Twig\Extension;
 
 use Endroid\Bundle\ImagePlaceholderBundle\Service\ImagePlaceholderService;
 use Twig_Extension;
+use Twig_SimpleFilter;
 
 class ImagePlaceholderExtension extends Twig_Extension
 {
@@ -34,9 +35,9 @@ class ImagePlaceholderExtension extends Twig_Extension
      */
     public function getFilters()
     {
-        return array(
-            new \Twig_SimpleFilter('image_placeholder', array($this, 'imagePlaceholderFilter')),
-        );
+        return [
+            new Twig_SimpleFilter('image_placeholder', [$this, 'imagePlaceholderFilter']),
+        ];
     }
 
     /**
@@ -49,7 +50,7 @@ class ImagePlaceholderExtension extends Twig_Extension
      *
      * @return string
      */
-    public function imagePlaceholderFilter($url, $width, $height, array $options = array())
+    public function imagePlaceholderFilter($url, $width, $height, array $options = [])
     {
         if ($this->imagePlaceholderService->isValidImageUrl($url)) {
             return $url;

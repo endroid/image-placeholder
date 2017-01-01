@@ -14,7 +14,7 @@ class PipsumProvider implements ProviderInterface
     /**
      * {@inheritdoc}
      */
-    public function getUrl($width, $height, array $options = array())
+    public function getUrl($width, $height, array $options = [])
     {
         $url = 'http://pipsum.com/'.$width.'x'.$height.'.jpg'.$width.'/'.$height;
 

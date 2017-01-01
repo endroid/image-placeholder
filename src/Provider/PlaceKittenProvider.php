@@ -14,7 +14,7 @@ class PlaceKittenProvider implements ProviderInterface
     /**
      * {@inheritdoc}
      */
-    public function getUrl($width, $height, array $options = array())
+    public function getUrl($width, $height, array $options = [])
     {
         $url = 'http://www.placekitten.com/'.$width.'/'.$height;
 

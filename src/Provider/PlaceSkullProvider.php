@@ -14,7 +14,7 @@ class PlaceSkullProvider implements ProviderInterface
     /**
      * {@inheritdoc}
      */
-    public function getUrl($width, $height, array $options = array())
+    public function getUrl($width, $height, array $options = [])
     {
         $url = 'http://placeskull.com/'.$width.'/'.$height.'/';
 

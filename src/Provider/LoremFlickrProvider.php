@@ -14,7 +14,7 @@ class LoremFlickrProvider implements ProviderInterface
     /**
      * {@inheritdoc}
      */
-    public function getUrl($width, $height, array $options = array())
+    public function getUrl($width, $height, array $options = [])
     {
         $url = 'http://loremflickr.com/'.$width.'/'.$height.'/';
 

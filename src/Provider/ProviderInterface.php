@@ -20,7 +20,7 @@ interface ProviderInterface
      *
      * @return mixed
      */
-    public function getUrl($width, $height, array $options = array());
+    public function getUrl($width, $height, array $options = []);
 
     /**
      * Returns the provider name.
