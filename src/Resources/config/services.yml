@@ -1,69 +1,69 @@
 services:
     endroid.image_placeholder.service:
-        class: Endroid\Bundle\ImagePlaceholderBundle\Service\ImagePlaceholderService
+        class: Endroid\ImagePlaceholderBundle\Service\ImagePlaceholderService
 
     endroid.image_placeholder.twig.extension:
-        class: Endroid\Bundle\ImagePlaceholderBundle\Twig\Extension\ImagePlaceholderExtension
+        class: Endroid\ImagePlaceholderBundle\Twig\Extension\ImagePlaceholderExtension
         arguments: [ '@endroid.image_placeholder.service' ]
         tags:
             - { name: twig.extension }
 
     endroid.image_placeholder.provider.baconmockup:
-        class: Endroid\Bundle\ImagePlaceholderBundle\Provider\BaconMockupProvider
+        class: Endroid\ImagePlaceholderBundle\Provider\BaconMockupProvider
         tags:
             - { name: endroid.image_placeholder.provider }
 
     endroid.image_placeholder.provider.beerhold:
-        class: Endroid\Bundle\ImagePlaceholderBundle\Provider\BeerHoldProvider
+        class: Endroid\ImagePlaceholderBundle\Provider\BeerHoldProvider
         tags:
             - { name: endroid.image_placeholder.provider }
 
     endroid.image_placeholder.provider.loremflickr:
-        class: Endroid\Bundle\ImagePlaceholderBundle\Provider\LoremFlickrProvider
+        class: Endroid\ImagePlaceholderBundle\Provider\LoremFlickrProvider
         tags:
             - { name: endroid.image_placeholder.provider }
 
     endroid.image_placeholder.provider.lorempixel:
-        class: Endroid\Bundle\ImagePlaceholderBundle\Provider\LoremPixelProvider
+        class: Endroid\ImagePlaceholderBundle\Provider\LoremPixelProvider
         tags:
             - { name: endroid.image_placeholder.provider }
 
     endroid.image_placeholder.provider.pipsum:
-        class: Endroid\Bundle\ImagePlaceholderBundle\Provider\PipsumProvider
+        class: Endroid\ImagePlaceholderBundle\Provider\PipsumProvider
         tags:
             - { name: endroid.image_placeholder.provider }
 
     endroid.image_placeholder.provider.placebear:
-        class: Endroid\Bundle\ImagePlaceholderBundle\Provider\PlaceBearProvider
+        class: Endroid\ImagePlaceholderBundle\Provider\PlaceBearProvider
         tags:
             - { name: endroid.image_placeholder.provider }
 
     endroid.image_placeholder.provider.placecreature:
-        class: Endroid\Bundle\ImagePlaceholderBundle\Provider\PlaceCreatureProvider
+        class: Endroid\ImagePlaceholderBundle\Provider\PlaceCreatureProvider
         tags:
             - { name: endroid.image_placeholder.provider }
 
     endroid.image_placeholder.provider.placehoff:
-        class: Endroid\Bundle\ImagePlaceholderBundle\Provider\PlaceHoffProvider
+        class: Endroid\ImagePlaceholderBundle\Provider\PlaceHoffProvider
         tags:
             - { name: endroid.image_placeholder.provider }
 
     endroid.image_placeholder.provider.placehold:
-        class: Endroid\Bundle\ImagePlaceholderBundle\Provider\PlaceholdItProvider
+        class: Endroid\ImagePlaceholderBundle\Provider\PlaceholdItProvider
         tags:
             - { name: endroid.image_placeholder.provider }
 
     endroid.image_placeholder.provider.placekitten:
-        class: Endroid\Bundle\ImagePlaceholderBundle\Provider\PlaceKittenProvider
+        class: Endroid\ImagePlaceholderBundle\Provider\PlaceKittenProvider
         tags:
             - { name: endroid.image_placeholder.provider }
 
     endroid.image_placeholder.provider.placeskull:
-        class: Endroid\Bundle\ImagePlaceholderBundle\Provider\PlaceSkullProvider
+        class: Endroid\ImagePlaceholderBundle\Provider\PlaceSkullProvider
         tags:
             - { name: endroid.image_placeholder.provider }
 
     endroid.image_placeholder.provider.unsplash:
-        class: Endroid\Bundle\ImagePlaceholderBundle\Provider\UnsplashItProvider
+        class: Endroid\ImagePlaceholderBundle\Provider\UnsplashItProvider
         tags:
             - { name: endroid.image_placeholder.provider }

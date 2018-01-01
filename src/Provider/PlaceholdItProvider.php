@@ -7,7 +7,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Endroid\Bundle\ImagePlaceholderBundle\Provider;
+namespace Endroid\ImagePlaceholderBundle\Provider;
 
 class PlaceholdItProvider implements ProviderInterface
 {

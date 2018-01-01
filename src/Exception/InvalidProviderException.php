@@ -7,7 +7,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Endroid\Bundle\ImagePlaceholderBundle\Exception;
+namespace Endroid\ImagePlaceholderBundle\Exception;
 
 use Exception;
 

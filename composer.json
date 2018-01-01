@@ -1,39 +1,36 @@
 {
     "name": "endroid/image-placeholder-bundle",
     "description": "Endroid Image Placeholder Bundle for Symfony",
-    "keywords": ["endroid", "image", "placeholder", "unsplash", "placehold", "placekitten", "symfony", "bundle"],
-    "homepage": "https://github.com/endroid/EndroidImagePlaceholderBundle",
-    "type": "library",
+    "keywords": ["endroid", "image", "placeholder", "unsplash", "placehold", "placekitten", "symfony", "bundle", "php"],
+    "homepage": "https://github.com/endroid/image-placeholder-bundle",
+    "type": "symfony-bundle",
     "license": "MIT",
     "authors": [
         {
             "name": "Jeroen van den Enden",
             "email": "info@endroid.nl",
-            "homepage": "http://endroid.nl/"
+            "homepage": "https://endroid.nl/"
         }
     ],
     "require": {
-        "php": ">=5.4"
+        "php": ">=7.1"
     },
     "require-dev": {
-        "phpunit/phpunit": "^4.0|^5.0"
+        "phpunit/phpunit": "^5.7|^6.0"
     },
     "autoload": {
         "psr-4": {
-            "Endroid\\Bundle\\ImagePlaceholderBundle\\": "src/"
+            "Endroid\\ImagePlaceholderBundle\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Endroid\\Bundle\\ImagePlaceholderBundle\\Tests\\": "tests/"
+            "Endroid\\ImagePlaceholderBundle\\Tests\\": "tests/"
         }
-    },
-    "config": {
-        "bin-dir": "bin"
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "1.x-dev"
+            "dev-master": "2.x-dev"
         }
     }
 }

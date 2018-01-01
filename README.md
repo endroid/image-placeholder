@@ -1,10 +1,9 @@
-Image Placeholder Bundle
-========================
+# Image Placeholder Bundle
 
-*By [endroid](http://endroid.nl/)*
+*By [endroid](https://endroid.nl/)*
 
 [![Latest Stable Version](http://img.shields.io/packagist/v/endroid/image-placeholder-bundle.svg)](https://packagist.org/packages/endroid/image-placeholder-bundle)
-[![Build Status](http://img.shields.io/travis/endroid/EndroidImagePlaceholderBundle.svg)](http://travis-ci.org/endroid/EndroidImagePlaceholderBundle)
+[![Build Status](http://img.shields.io/travis/endroid/image-placeholder-bundle.svg)](http://travis-ci.org/endroid/image-placeholder-bundle)
 [![Total Downloads](http://img.shields.io/packagist/dt/endroid/image-placeholder-bundle.svg)](https://packagist.org/packages/endroid/image-placeholder-bundle)
 [![Monthly Downloads](http://img.shields.io/packagist/dm/endroid/image-placeholder-bundle.svg)](https://packagist.org/packages/endroid/image-placeholder-bundle)
 [![License](http://img.shields.io/packagist/l/endroid/image-placeholder-bundle.svg)](https://packagist.org/packages/endroid/image-placeholder-bundle)
@@ -12,7 +11,7 @@ Image Placeholder Bundle
 Provides a Twig filter that replaces empty or invalid URLs with a placeholder
 image. Multiple image providers are available.
 
-[![knpbundles.com](http://knpbundles.com/endroid/EndroidImagePlaceholderBundle/badge-short)](http://knpbundles.com/endroid/EndroidImagePlaceholderBundle)
+[![knpbundles.com](http://knpbundles.com/endroid/image-placeholder-bundle/badge-short)](http://knpbundles.com/endroid/image-placeholder-bundle)
 
 ## Requirements
 
@@ -37,7 +36,7 @@ public function registerBundles()
 {
     $bundles = [
         // ...
-        new Endroid\Bundle\ImagePlaceholderBundle\EndroidImagePlaceholderBundle(),
+        new Endroid\ImagePlaceholderBundle\EndroidImagePlaceholderBundle(),
     ];
 }
 ```

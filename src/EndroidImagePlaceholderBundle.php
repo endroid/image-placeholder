@@ -7,9 +7,9 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Endroid\Bundle\ImagePlaceholderBundle;
+namespace Endroid\ImagePlaceholderBundle;
 
-use Endroid\Bundle\ImagePlaceholderBundle\DependencyInjection\Compiler\ProviderPass;
+use Endroid\ImagePlaceholderBundle\DependencyInjection\Compiler\ProviderPass;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 

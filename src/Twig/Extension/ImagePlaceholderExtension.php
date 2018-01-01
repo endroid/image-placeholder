@@ -7,9 +7,9 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Endroid\Bundle\ImagePlaceholderBundle\Twig\Extension;
+namespace Endroid\ImagePlaceholderBundle\Twig\Extension;
 
-use Endroid\Bundle\ImagePlaceholderBundle\Service\ImagePlaceholderService;
+use Endroid\ImagePlaceholderBundle\Service\ImagePlaceholderService;
 use Twig_Extension;
 use Twig_SimpleFilter;
 

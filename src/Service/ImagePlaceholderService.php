@@ -7,9 +7,9 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Endroid\Bundle\ImagePlaceholderBundle\Service;
+namespace Endroid\ImagePlaceholderBundle\Service;
 
-use Endroid\Bundle\ImagePlaceholderBundle\Provider\ProviderInterface;
+use Endroid\ImagePlaceholderBundle\Provider\ProviderInterface;
 use Symfony\Component\Security\Core\Exception\ProviderNotFoundException;
 
 class ImagePlaceholderService

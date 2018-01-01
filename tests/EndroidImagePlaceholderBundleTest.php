@@ -7,7 +7,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Endroid\Bundle\ImagePlaceholderBundle;
+namespace Endroid\ImagePlaceholderBundle;
 
 use PHPUnit_Framework_TestCase;
 
