@@ -83,7 +83,7 @@ class ImagePlaceholderService
     {
         $this->providers[$provider->getName()] = $provider;
 
-        if (!$this->providerName && count($this->providers) == 1) {
+        if (!$this->providerName && 1 == count($this->providers)) {
             $this->providerName = $provider->getName();
         }
     }
