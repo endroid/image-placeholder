@@ -24,7 +24,7 @@ class Configuration implements ConfigurationInterface
         $treeBuilder
             ->root('endroid_image_placeholder')
                 ->children()
-                    ->booleanNode('enabled')->isRequired()->end()
+                    ->booleanNode('enabled')->defaultValue(true)->end()
                     ->scalarNode('provider')->defaultValue('placehold')->end()
                     ->booleanNode('check_image_exists')->defaultValue(true)->end()
                 ->end()
