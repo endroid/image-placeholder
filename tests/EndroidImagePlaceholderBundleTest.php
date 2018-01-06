@@ -9,9 +9,9 @@
 
 namespace Endroid\ImagePlaceholderBundle;
 
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase;
 
-class EndroidImagePlaceholderBundleTest extends PHPUnit_Framework_TestCase
+class EndroidImagePlaceholderBundleTest extends TestCase
 {
     public function testNoTestsYet()
     {
