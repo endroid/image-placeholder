@@ -7,14 +7,11 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Endroid\ImagePlaceholderBundle\Provider;
+namespace Endroid\ImagePlaceholder\Provider;
 
 class LoremPixelProvider implements ProviderInterface
 {
-    /**
-     * {@inheritdoc}
-     */
-    public function getUrl($width, $height, array $options = [])
+    public function getUrl($width, $height, array $options = []): string
     {
         $url = 'http://lorempixel.com/'.$width.'/'.$height.'/';
 
@@ -25,10 +22,7 @@ class LoremPixelProvider implements ProviderInterface
         return $url;
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function getName()
+    public function getName(): string
     {
         return 'lorempixel';
     }

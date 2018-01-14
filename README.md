@@ -1,62 +1,33 @@
-# Image Placeholder Bundle
+# Image Placeholder
 
 *By [endroid](https://endroid.nl/)*
 
-[![Latest Stable Version](http://img.shields.io/packagist/v/endroid/image-placeholder-bundle.svg)](https://packagist.org/packages/endroid/image-placeholder-bundle)
-[![Build Status](http://img.shields.io/travis/endroid/image-placeholder-bundle.svg)](http://travis-ci.org/endroid/image-placeholder-bundle)
-[![Total Downloads](http://img.shields.io/packagist/dt/endroid/image-placeholder-bundle.svg)](https://packagist.org/packages/endroid/image-placeholder-bundle)
-[![Monthly Downloads](http://img.shields.io/packagist/dm/endroid/image-placeholder-bundle.svg)](https://packagist.org/packages/endroid/image-placeholder-bundle)
-[![License](http://img.shields.io/packagist/l/endroid/image-placeholder-bundle.svg)](https://packagist.org/packages/endroid/image-placeholder-bundle)
+[![Latest Stable Version](http://img.shields.io/packagist/v/endroid/image-placeholder.svg)](https://packagist.org/packages/endroid/image-placeholder)
+[![Build Status](http://img.shields.io/travis/endroid/image-placeholder.svg)](http://travis-ci.org/endroid/image-placeholder)
+[![Total Downloads](http://img.shields.io/packagist/dt/endroid/image-placeholder.svg)](https://packagist.org/packages/endroid/image-placeholder)
+[![Monthly Downloads](http://img.shields.io/packagist/dm/endroid/image-placeholder.svg)](https://packagist.org/packages/endroid/image-placeholder)
+[![License](http://img.shields.io/packagist/l/endroid/image-placeholder.svg)](https://packagist.org/packages/endroid/image-placeholder)
 
 Provides a Twig filter that replaces empty or invalid URLs with a placeholder
-image. Multiple image providers are available.
-
-[![knpbundles.com](http://knpbundles.com/endroid/image-placeholder-bundle/badge-short)](http://knpbundles.com/endroid/image-placeholder-bundle)
-
-## Requirements
-
-* Symfony
-* Dependencies: none
+image from any of the registered image providers.
 
 ## Installation
 
-Use [Composer](https://getcomposer.org/) to install the bundle.
+Use [Composer](https://getcomposer.org/) to install the library.
 
 ``` bash
-$ composer require endroid/image-placeholder-bundle
-```
-
-Then enable the bundle via the kernel.
-
-``` php
-<?php
-// app/AppKernel.php
-
-public function registerBundles()
-{
-    $bundles = [
-        // ...
-        new Endroid\ImagePlaceholderBundle\EndroidImagePlaceholderBundle(),
-    ];
-}
+$ composer require endroid/image-placeholder
 ```
 
 ## Configuration
 
 The default placeholder generation parameters can be overridden via the
-configuration. All parameters are optional.
-
-```yaml
-endroid_image_placeholder:
-    enabled: %kernel.debug%
-    provider: lorempixel
-    check_image_exists: true
-```
+constructor arguments or service definition. All parameters are optional.
 
 ## Usage
 
 Placeholders are placed via a Twig filter that shows the placeholder image in
-case the bundle is activated and the given URL is empty or invalid.
+case the service is activated and the given URL is empty or invalid.
 
 ``` twig
 <img src="{{ image_url|image_placeholder(200, 300) }}" />
@@ -88,5 +59,5 @@ Lock your dependencies for production and test your code when upgrading.
 
 ## License
 
-This bundle is under the MIT license. For the full copyright and license
+This library is under the MIT license. For the full copyright and license
 information please view the LICENSE file that was distributed with this source code.

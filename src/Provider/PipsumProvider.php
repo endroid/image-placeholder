@@ -7,24 +7,18 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Endroid\ImagePlaceholderBundle\Provider;
+namespace Endroid\ImagePlaceholder\Provider;
 
 class PipsumProvider implements ProviderInterface
 {
-    /**
-     * {@inheritdoc}
-     */
-    public function getUrl($width, $height, array $options = [])
+    public function getUrl($width, $height, array $options = []): string
     {
-        $url = 'http://pipsum.com/'.$width.'x'.$height.'.jpg'.$width.'/'.$height;
+        $url = 'http://pipsum.com/'.$width.'x'.$height.'.jpg';
 
         return $url;
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function getName()
+    public function getName(): string
     {
         return 'pipsum';
     }

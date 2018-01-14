@@ -7,24 +7,18 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Endroid\ImagePlaceholderBundle\Provider;
+namespace Endroid\ImagePlaceholder\Provider;
 
 class PlaceCreatureProvider implements ProviderInterface
 {
-    /**
-     * {@inheritdoc}
-     */
-    public function getUrl($width, $height, array $options = [])
+    public function getUrl($width, $height, array $options = []): string
     {
         $url = 'http://placecreature.com/'.$width.'/'.$height;
 
         return $url;
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function getName()
+    public function getName(): string
     {
         return 'placecreature';
     }

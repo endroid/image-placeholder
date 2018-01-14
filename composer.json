@@ -1,9 +1,9 @@
 {
-    "name": "endroid/image-placeholder-bundle",
-    "description": "Endroid Image Placeholder Bundle for Symfony",
-    "keywords": ["endroid", "image", "placeholder", "unsplash", "placehold", "placekitten", "symfony", "bundle", "php"],
-    "homepage": "https://github.com/endroid/image-placeholder-bundle",
-    "type": "symfony-bundle",
+    "name": "endroid/image-placeholder",
+    "description": "Endroid Image Placeholder",
+    "keywords": ["endroid", "image", "placeholder", "unsplash", "placehold", "placekitten", "php"],
+    "homepage": "https://github.com/endroid/image-placeholder",
+    "type": "library",
     "license": "MIT",
     "authors": [
         {
@@ -20,12 +20,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Endroid\\ImagePlaceholderBundle\\": "src/"
+            "Endroid\\ImagePlaceholder\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Endroid\\ImagePlaceholderBundle\\Tests\\": "tests/"
+            "Endroid\\ImagePlaceholder\\Tests\\": "tests/"
         }
     },
     "extra": {

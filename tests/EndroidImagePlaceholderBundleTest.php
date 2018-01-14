@@ -7,11 +7,11 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Endroid\ImagePlaceholderBundle;
+namespace Endroid\ImagePlaceholder;
 
 use PHPUnit\Framework\TestCase;
 
-class EndroidImagePlaceholderBundleTest extends TestCase
+class EndroidImagePlaceholderTest extends TestCase
 {
     public function testNoTestsYet()
     {

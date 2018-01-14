@@ -7,32 +7,21 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Endroid\ImagePlaceholderBundle\Twig\Extension;
+namespace Endroid\ImagePlaceholder\Twig\Extension;
 
-use Endroid\ImagePlaceholderBundle\Service\ImagePlaceholderService;
+use Endroid\ImagePlaceholder\ImagePlaceHolder;
 use Twig_Extension;
 use Twig_SimpleFilter;
 
 class ImagePlaceholderExtension extends Twig_Extension
 {
-    /**
-     * @var ImagePlaceholderService
-     */
-    protected $imagePlaceholderService;
+    private $imagePlaceholder;
 
-    /**
-     * Creates a new instance.
-     *
-     * @param ImagePlaceholderService $imagePlaceholderService
-     */
-    public function __construct(ImagePlaceholderService $imagePlaceholderService)
+    public function __construct(ImagePlaceholder $imagePlaceholder)
     {
-        $this->imagePlaceholderService = $imagePlaceholderService;
+        $this->imagePlaceholder = $imagePlaceholder;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getFilters()
     {
         return [
@@ -40,28 +29,11 @@ class ImagePlaceholderExtension extends Twig_Extension
         ];
     }
 
-    /**
-     * Replaces the image URL with the placeholder URL when needed.
-     *
-     * @param string $url
-     * @param int    $width
-     * @param int    $height
-     * @param array  $options
-     *
-     * @return string
-     */
-    public function imagePlaceholderFilter($url, $width, $height, array $options = [])
+    public function imagePlaceholderFilter(string $url, int $width, int $height, array $options = []): string
     {
-        if ($this->imagePlaceholderService->isValidImageUrl($url)) {
-            return $url;
-        }
-
-        return $this->imagePlaceholderService->getUrl($width, $height, $options);
+        return $this->imagePlaceholder->getUrl($url, $width, $height, $options);
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getName()
     {
         return 'image_placeholder_extension';
