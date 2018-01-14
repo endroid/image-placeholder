@@ -9,7 +9,7 @@
 
 namespace Endroid\ImagePlaceholder\Provider;
 
-class LoremFlickrProvider implements ProviderInterface
+final class LoremFlickrProvider implements ProviderInterface
 {
     public function getUrl($width, $height, array $options = []): string
     {

@@ -9,7 +9,7 @@
 
 namespace Endroid\ImagePlaceholder\Twig\Extension;
 
-use Endroid\ImagePlaceholder\ImagePlaceHolder;
+use Endroid\ImagePlaceholder\ImagePlaceholder;
 use Twig_Extension;
 use Twig_SimpleFilter;
 

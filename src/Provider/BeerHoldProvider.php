@@ -9,7 +9,7 @@
 
 namespace Endroid\ImagePlaceholder\Provider;
 
-class BeerHoldProvider implements ProviderInterface
+final class BeerHoldProvider implements ProviderInterface
 {
     public function getUrl($width, $height, array $options = []): string
     {

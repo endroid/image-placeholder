@@ -9,7 +9,7 @@
 
 namespace Endroid\ImagePlaceholder\Provider;
 
-class PlaceHoffProvider implements ProviderInterface
+final class PlaceHoffProvider implements ProviderInterface
 {
     public function getUrl($width, $height, array $options = []): string
     {

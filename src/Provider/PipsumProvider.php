@@ -9,7 +9,7 @@
 
 namespace Endroid\ImagePlaceholder\Provider;
 
-class PipsumProvider implements ProviderInterface
+final class PipsumProvider implements ProviderInterface
 {
     public function getUrl($width, $height, array $options = []): string
     {

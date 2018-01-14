@@ -9,7 +9,7 @@
 
 namespace Endroid\ImagePlaceholder\Provider;
 
-class BaconMockupProvider implements ProviderInterface
+final class BaconMockupProvider implements ProviderInterface
 {
     public function getUrl($width, $height, array $options = []): string
     {

@@ -9,7 +9,7 @@
 
 namespace Endroid\ImagePlaceholder\Provider;
 
-class UnsplashItProvider implements ProviderInterface
+final class UnsplashItProvider implements ProviderInterface
 {
     public function getUrl($width, $height, array $options = []): string
     {

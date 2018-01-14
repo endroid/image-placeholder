@@ -9,7 +9,7 @@
 
 namespace Endroid\ImagePlaceholder\Provider;
 
-class PlaceCreatureProvider implements ProviderInterface
+final class PlaceCreatureProvider implements ProviderInterface
 {
     public function getUrl($width, $height, array $options = []): string
     {
