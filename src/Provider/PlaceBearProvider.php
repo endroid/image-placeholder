@@ -13,7 +13,7 @@ final class PlaceBearProvider implements ProviderInterface
 {
     public function getUrl($width, $height, array $options = []): string
     {
-        $url = 'http://placebear.com/'.$width.'/'.$height;
+        $url = 'https://placebear.com/'.$width.'/'.$height;
 
         return $url;
     }

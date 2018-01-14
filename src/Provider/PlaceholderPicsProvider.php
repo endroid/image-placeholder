@@ -9,17 +9,21 @@
 
 namespace Endroid\ImagePlaceholder\Provider;
 
-final class PlaceKittenProvider implements ProviderInterface
+final class PlaceholderPicsProvider implements ProviderInterface
 {
     public function getUrl($width, $height, array $options = []): string
     {
-        $url = 'http://www.placekitten.com/'.$width.'/'.$height;
+        if (!isset($options['text'])) {
+            $options['text'] = '';
+        }
+
+        $url = 'https://placeholder.pics/svg/'.$width.'x'.$height.'/DEDEDE/555555/'.$options['text'];
 
         return $url;
     }
 
     public function getName(): string
     {
-        return 'placekitten';
+        return 'placeholderpics';
     }
 }

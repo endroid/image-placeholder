@@ -39,7 +39,6 @@ case the service is activated and the given URL is empty or invalid.
 Currently the following providers are supported.
 
 * [baconmockup.com](https://baconmockup.com/)
-* [beerhold.it](http://beerhold.it/)
 * [loremflickr.com](http://loremflickr.com/)
 * [lorempixel.com](http://lorempixel.com/)
 * [pipsum.com](http://pipsum.com/)

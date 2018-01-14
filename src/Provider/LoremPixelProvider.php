@@ -13,7 +13,7 @@ final class LoremPixelProvider implements ProviderInterface
 {
     public function getUrl($width, $height, array $options = []): string
     {
-        $url = 'http://lorempixel.com/'.$width.'/'.$height.'/';
+        $url = 'https://lorempixel.com/'.$width.'/'.$height.'/';
 
         if (isset($options['category'])) {
             $url .= $options['category'].'/';

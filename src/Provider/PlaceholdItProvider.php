@@ -13,7 +13,7 @@ final class PlaceholdItProvider implements ProviderInterface
 {
     public function getUrl($width, $height, array $options = []): string
     {
-        $url = 'http://placehold.it/'.$width.'x'.$height;
+        $url = 'https://placehold.it/'.$width.'x'.$height;
 
         return $url;
     }

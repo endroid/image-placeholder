@@ -19,9 +19,10 @@ class ImagePlaceholder
     private $checkImageExists;
     private $providers;
 
-    public function __construct(bool $enabled = true, bool $checkImageExists = false)
+    public function __construct(bool $enabled = true, string $providerName = null, bool $checkImageExists = false)
     {
         $this->enabled = $enabled;
+        $this->providerName = $providerName;
         $this->checkImageExists = $checkImageExists;
 
         $this->providers = [];

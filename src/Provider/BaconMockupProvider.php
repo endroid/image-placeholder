@@ -13,7 +13,7 @@ final class BaconMockupProvider implements ProviderInterface
 {
     public function getUrl($width, $height, array $options = []): string
     {
-        $url = 'http://baconmockup.com/'.$width.'/'.$height.'/';
+        $url = 'https://baconmockup.com/'.$width.'/'.$height.'/';
 
         return $url;
     }

@@ -13,7 +13,7 @@ final class LoremFlickrProvider implements ProviderInterface
 {
     public function getUrl($width, $height, array $options = []): string
     {
-        $url = 'http://loremflickr.com/'.$width.'/'.$height.'/';
+        $url = 'https://loremflickr.com/'.$width.'/'.$height.'/';
 
         return $url;
     }
