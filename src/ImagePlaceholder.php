@@ -33,6 +33,13 @@ class ImagePlaceholder
         $this->providerName = $providerName;
     }
 
+    public function addProviders(iterable $providers)
+    {
+        foreach ($providers as $provider) {
+            $this->addProvider($provider);
+        }
+    }
+
     public function addProvider(ProviderInterface $provider): void
     {
         $this->providers[$provider->getName()] = $provider;
