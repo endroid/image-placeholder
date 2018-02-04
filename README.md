@@ -43,10 +43,9 @@ Currently the following providers are supported.
 * [lorempixel.com](http://lorempixel.com/)
 * [pipsum.com](http://pipsum.com/)
 * [placebear.com](http://placebear.com/)
-* [placecreature.com](http://placecreature.com/)
 * [place-hoff.com](http://place-hoff.com/)
+* [placeholder.pics](https://placeholder.pics/)
 * [placehold.it](http://placehold.it/)
-* [placekitten.com](http://placekitten.com/)
 * [placeskull.com](http://placeskull.com/)
 * [unsplash.it](http://unsplash.it/)
 
