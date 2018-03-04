@@ -14,12 +14,12 @@ use PHPUnit\Framework\TestCase;
 
 class ImagePlaceholderTest extends TestCase
 {
-    public function testCreate()
+    public function testProviderNotFound()
     {
         $imagePlaceholder = new ImagePlaceholder();
 
         $this->expectException(ProviderNotFoundException::class);
-        
+
         $imagePlaceholder->getUrl('', 200, 200);
     }
 }
