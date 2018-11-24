@@ -86,7 +86,7 @@ class ImagePlaceholder
         }
 
         if (!array_key_exists($providerName, $this->providers)) {
-            throw new ProviderNotFoundException($providerName);
+            throw new ProviderNotFoundException(strval($providerName));
         }
 
         return $this->providers[$providerName];
