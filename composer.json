@@ -16,7 +16,8 @@
         "endroid/installer": "^1.0.3"
     },
     "require-dev": {
-        "endroid/test": "dev-master"
+        "endroid/test": "dev-master",
+        "twig/twig": "^2.0"
     },
     "autoload": {
         "psr-4": {
