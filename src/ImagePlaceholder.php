@@ -11,8 +11,8 @@ declare(strict_types=1);
 
 namespace Endroid\ImagePlaceholder;
 
-use Endroid\ImagePlaceholder\Provider\ProviderInterface;
 use Endroid\ImagePlaceholder\Exception\ProviderNotFoundException;
+use Endroid\ImagePlaceholder\Provider\ProviderInterface;
 
 class ImagePlaceholder
 {
