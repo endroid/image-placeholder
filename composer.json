@@ -13,10 +13,10 @@
     ],
     "require": {
         "php": ">=7.2",
-        "endroid/installer": "^1.0.3"
+        "endroid/installer": "^1.2.2"
     },
     "require-dev": {
-        "endroid/test": "dev-master",
+        "endroid/quality": "dev-master",
         "twig/twig": "^2.0"
     },
     "autoload": {
