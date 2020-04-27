@@ -12,10 +12,10 @@ declare(strict_types=1);
 namespace Endroid\ImagePlaceholder\Twig\Extension;
 
 use Endroid\ImagePlaceholder\ImagePlaceholder;
-use Twig_Extension;
-use Twig_SimpleFilter;
+use Twig\Extension\AbstractExtension;
+use Twig\TwigFilter;
 
-class ImagePlaceholderExtension extends Twig_Extension
+class ImagePlaceholderExtension extends AbstractExtension
 {
     private $imagePlaceholder;
 
@@ -27,7 +27,7 @@ class ImagePlaceholderExtension extends Twig_Extension
     public function getFilters()
     {
         return [
-            new Twig_SimpleFilter('image_placeholder', [$this, 'imagePlaceholderFilter']),
+            new TwigFilter('image_placeholder', [$this, 'imagePlaceholderFilter']),
         ];
     }
 

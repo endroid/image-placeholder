@@ -19,6 +19,8 @@ class ImagePlaceholder
     private $enabled;
     private $providerName;
     private $checkImageExists;
+
+    /** @var array[string, Provider] */
     private $providers;
 
     public function __construct(bool $enabled = true, string $providerName = null, bool $checkImageExists = false)
@@ -85,7 +87,7 @@ class ImagePlaceholder
             $providerName = $this->providerName;
         }
 
-        if (!array_key_exists($providerName, $this->providers)) {
+        if (!isset($this->providers[$providerName])) {
             throw new ProviderNotFoundException(strval($providerName));
         }
 
