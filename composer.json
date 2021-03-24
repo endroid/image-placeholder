@@ -19,6 +19,9 @@
         "endroid/quality": "dev-master",
         "twig/twig": "^2.4||^3.0"
     },
+    "suggest": {
+        "roave/security-advisories": "Avoids installation of package versions with vulnerabilities"
+    },
     "autoload": {
         "psr-4": {
             "Endroid\\ImagePlaceholder\\": "src/"
