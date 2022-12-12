@@ -12,12 +12,12 @@
         }
     ],
     "require": {
-        "php": "^7.4||^8.0",
+        "php": "^8.0",
         "endroid/installer": "^1.2.2"
     },
     "require-dev": {
         "endroid/quality": "dev-master",
-        "twig/twig": "^2.4||^3.0"
+        "twig/twig": "^3.0"
     },
     "suggest": {
         "roave/security-advisories": "Avoids installation of package versions with vulnerabilities"
@@ -38,6 +38,9 @@
         }
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "endroid/installer": true
+        }
     }
 }

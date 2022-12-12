@@ -2,95 +2,42 @@
 
 declare(strict_types=1);
 
-/*
- * (c) Jeroen van den Enden <info@endroid.nl>
- *
- * This source file is subject to the MIT license that is bundled
- * with this source code in the file LICENSE.
- */
-
 namespace Endroid\ImagePlaceholder;
 
 use Endroid\ImagePlaceholder\Exception\ProviderNotFoundException;
 use Endroid\ImagePlaceholder\Provider\ProviderInterface;
 
-class ImagePlaceholder
+final class ImagePlaceholder
 {
-    private $enabled;
-    private $providerName;
-    private $checkImageExists;
+    public const OPTION_PROVIDERS = 'providers';
+    public const OPTION_CHECK_IMAGE_EXISTS = 'check_image_exists';
 
-    /** @var array[string, Provider] */
-    private $providers;
-
-    public function __construct(bool $enabled = true, string $providerName = null, bool $checkImageExists = false)
-    {
-        $this->enabled = $enabled;
-        $this->providerName = $providerName;
-        $this->checkImageExists = $checkImageExists;
-
-        $this->providers = [];
+    public function __construct(
+        /** @var array<string, ProviderInterface> $providers */
+        private array $providers
+    ) {
     }
 
-    public function setProvider(string $providerName): void
-    {
-        $this->providerName = $providerName;
-    }
-
-    public function addProviders(iterable $providers)
-    {
-        foreach ($providers as $provider) {
-            $this->addProvider($provider);
-        }
-    }
-
-    public function addProvider(ProviderInterface $provider): void
-    {
-        $this->providers[$provider->getName()] = $provider;
-    }
-
-    protected function imageExists($url)
-    {
-        $contents = @file_get_contents($url);
-
-        return false !== $contents;
-    }
-
+    /** @param array<mixed> $options */
     public function getUrl(string $url, int $width, int $height, array $options = []): string
     {
-        $providerName = $this->providerName;
-        if (isset($options['provider'])) {
-            $providerName = $options['provider'];
-            unset($options['provider']);
-        }
-
-        $checkImageExists = $this->checkImageExists;
-        if (isset($options['check_image_exists'])) {
-            $checkImageExists = $options['check_image_exists'];
-            unset($options['check_image_exists']);
-        }
+        $providers = $options[self::OPTION_PROVIDERS] ?? array_keys($this->providers);
+        $checkImageExists = $options[self::OPTION_CHECK_IMAGE_EXISTS] ?? false;
 
         if (!$checkImageExists && strlen($url) > 0) {
             return $url;
         }
 
-        if ($checkImageExists && $this->imageExists($url)) {
+        if ($checkImageExists && false !== @file_get_contents($url)) {
             return $url;
         }
 
-        return $this->getProvider($providerName)->getUrl($width, $height, $options);
-    }
+        shuffle($providers);
 
-    private function getProvider(string $providerName = null): ProviderInterface
-    {
-        if (null === $providerName) {
-            $providerName = $this->providerName;
+        if (!isset($this->providers[$providers[0]])) {
+            throw new ProviderNotFoundException(sprintf('Provider "%s" not found', $providers[0]));
         }
 
-        if (!isset($this->providers[$providerName])) {
-            throw new ProviderNotFoundException(strval($providerName));
-        }
-
-        return $this->providers[$providerName];
+        return $this->providers[$providers[0]]->getUrl($width, $height, $options);
     }
 }

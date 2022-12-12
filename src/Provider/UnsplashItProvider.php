@@ -2,22 +2,14 @@
 
 declare(strict_types=1);
 
-/*
- * (c) Jeroen van den Enden <info@endroid.nl>
- *
- * This source file is subject to the MIT license that is bundled
- * with this source code in the file LICENSE.
- */
-
 namespace Endroid\ImagePlaceholder\Provider;
 
 final class UnsplashItProvider implements ProviderInterface
 {
-    public function getUrl($width, $height, array $options = []): string
+    /** @param array<mixed> $options */
+    public function getUrl(int $width, int $height, array $options = []): string
     {
-        $url = 'https://unsplash.it/'.$width.'/'.$height;
-
-        return $url;
+        return 'https://unsplash.it/'.$width.'/'.$height;
     }
 
     public function getName(): string
