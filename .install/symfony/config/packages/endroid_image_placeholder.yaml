@@ -4,14 +4,5 @@ services:
         autoconfigure: true
         public: false
 
-    _instanceof:
-        Endroid\ImagePlaceholder\Provider\ProviderInterface:
-            tags: ['endroid_image_placeholder.provider']
-
-    Endroid\ImagePlaceholder\Provider\:
-        resource: '../../vendor/endroid/image-placeholder/src/Provider/*'
-
-    Endroid\ImagePlaceholder\ImagePlaceholder:
-        arguments: [!tagged endroid_image_placeholder.provider]
-
+    Endroid\ImagePlaceholder\ImagePlaceholder: ~
     Endroid\ImagePlaceholder\Twig\Extension\ImagePlaceholderExtension: ~

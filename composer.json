@@ -13,6 +13,7 @@
     ],
     "require": {
         "php": "^8.0",
+        "ext-gd": "*",
         "endroid/installer": "^1.2.2"
     },
     "require-dev": {
