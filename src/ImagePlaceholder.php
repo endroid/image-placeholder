@@ -11,6 +11,19 @@ final class ImagePlaceholder
     /** @param array<string, mixed> $options */
     public function getUrl(string|null $url, int $width, int $height, array $options = []): string
     {
+        $checkImageExists = $options[self::OPTION_CHECK_IMAGE_EXISTS] ?? true;
+
+        $url = trim(strval($url));
+        if ('' !== $url) {
+            if ($checkImageExists) {
+                if (false !== filter_var($url, FILTER_VALIDATE_URL)) {
+                    return $url;
+                }
+            } else {
+                return $url;
+            }
+        }
+
         if (!extension_loaded('gd')) {
             throw new \Exception('Unable to generate image: please check if the GD extension is enabled and configured correctly');
         }

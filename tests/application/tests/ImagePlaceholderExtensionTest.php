@@ -6,7 +6,7 @@ namespace Endroid\ImagePlaceholder\Tests;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
-class ImagePlaceholderControllerTest extends WebTestCase
+final class ImagePlaceholderControllerTest extends WebTestCase
 {
     public function testDemoController()
     {

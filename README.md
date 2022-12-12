@@ -8,8 +8,7 @@
 [![Monthly Downloads](http://img.shields.io/packagist/dm/endroid/image-placeholder.svg)](https://packagist.org/packages/endroid/image-placeholder)
 [![License](http://img.shields.io/packagist/l/endroid/image-placeholder.svg)](https://packagist.org/packages/endroid/image-placeholder)
 
-Provides a Twig filter that replaces empty or invalid URLs with a placeholder
-image from any of the registered image providers.
+Provides a Twig filter that replaces empty or invalid URLs with a placeholder image.
 
 ## Installation
 
@@ -31,23 +30,8 @@ case the service is activated and the given URL is empty or invalid.
 
 ``` twig
 <img src="{{ image_url|image_placeholder(200, 300) }}" />
-<img src="{{ image_url|image_placeholder(200, 300, { provider: 'placehoff' }) }}" />
+<img src="{{ image_url|image_placeholder(200, 300, { check_image_exists: false }) }}" />
 ```
-
-## Providers
-
-Currently the following providers are supported.
-
-* [baconmockup.com](https://baconmockup.com/)
-* [loremflickr.com](http://loremflickr.com/)
-* [lorempixel.com](http://lorempixel.com/)
-* [pipsum.com](http://pipsum.com/)
-* [placebear.com](http://placebear.com/)
-* [place-hoff.com](http://place-hoff.com/)
-* [placeholder.pics](https://placeholder.pics/)
-* [placehold.it](http://placehold.it/)
-* [placeskull.com](http://placeskull.com/)
-* [unsplash.it](http://unsplash.it/)
 
 ## Versioning
 
