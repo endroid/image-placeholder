@@ -11,7 +11,7 @@ use Twig\TwigFilter;
 final class ImagePlaceholderExtension extends AbstractExtension
 {
     public function __construct(
-        private ImagePlaceholder $imagePlaceholder
+        private readonly ImagePlaceholder $imagePlaceholder
     ) {
     }
 

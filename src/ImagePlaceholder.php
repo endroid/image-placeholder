@@ -6,7 +6,7 @@ namespace Endroid\ImagePlaceholder;
 
 final class ImagePlaceholder
 {
-    public const OPTION_CHECK_IMAGE_EXISTS = 'check_image_exists';
+    final public const OPTION_CHECK_IMAGE_EXISTS = 'check_image_exists';
 
     /** @param array<string, mixed> $options */
     public function getUrl(string|null $url, int $width, int $height, array $options = []): string
