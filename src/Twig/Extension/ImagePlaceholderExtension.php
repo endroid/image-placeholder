@@ -11,7 +11,7 @@ use Twig\TwigFilter;
 final class ImagePlaceholderExtension extends AbstractExtension
 {
     public function __construct(
-        private readonly ImagePlaceholder $imagePlaceholder
+        private readonly ImagePlaceholder $imagePlaceholder,
     ) {
     }
 
@@ -23,7 +23,7 @@ final class ImagePlaceholderExtension extends AbstractExtension
     }
 
     /** @param array<string> $options */
-    public function imagePlaceholderFilter(string|null $url, int $width, int $height, array $options = []): string
+    public function imagePlaceholderFilter(?string $url, int $width, int $height, array $options = []): string
     {
         return $this->imagePlaceholder->getUrl($url, $width, $height, $options);
     }
