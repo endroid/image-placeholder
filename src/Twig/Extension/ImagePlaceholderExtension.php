@@ -12,9 +12,13 @@ final class ImagePlaceholderExtension extends AbstractExtension
 {
     public function __construct(
         private readonly ImagePlaceholder $imagePlaceholder,
-    ) {
-    }
+    ) {}
 
+    /**
+     * @return TwigFilter[]
+     * @phpstan-return array<TwigFilter>
+     */
+    #[\Override]
     public function getFilters(): array
     {
         return [
@@ -22,14 +26,13 @@ final class ImagePlaceholderExtension extends AbstractExtension
         ];
     }
 
-    /** @param array<string> $options */
+    /**
+     * @param int<1, max>   $width
+     * @param int<1, max>   $height
+     * @param array<string, mixed> $options
+     */
     public function imagePlaceholderFilter(?string $url, int $width, int $height, array $options = []): string
     {
         return $this->imagePlaceholder->getUrl($url, $width, $height, $options);
-    }
-
-    public function getName(): string
-    {
-        return 'image_placeholder_extension';
     }
 }
