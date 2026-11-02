@@ -20,7 +20,7 @@
         }
     ],
     "require": {
-        "php": "^8.4",
+        "php": "^8.5",
         "ext-gd": "*",
         "endroid/installer": "^1.5",
         "symfony/twig-bundle": "^6.4||^7.4||^8.0"
